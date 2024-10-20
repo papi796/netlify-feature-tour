@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Details</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #ffe4e1;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .menu {
+            background-color: #ff69b4;
+            overflow: hidden;
+        }
+        .menu a {
+            float: left;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            background-color: #ff1493;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+        }
+        .content.active {
+            display: block;
+        }
+        .container {
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .gallery img {
+            border: 5px solid #ff69b4;
+            border-radius: 10px;
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <a href="#home" onclick="showContent('home')">Home</a>
+    <a href="#about" onclick="showContent('about')">About</a>
+    <a href="#family" onclick="showContent('family')">Family</a>
+    <a href="#gallery" onclick="showContent('gallery')">Photo Gallery</a>
+    <a href="#contact" onclick="showContent('contact')">Contact</a>
+</div>
+
+<div id="home" class="content container active">
+    <h2>Home</h2>
+    <p>Welcome to my world!</p>
+</div>
+
+<div id="about" class="content container">
+    <h2>About Me</h2>
+    <p>My name is Papi and I'm passionate about Fashion.</p>
+</div>
+
+<div id="family" class="content container">
+    <h2>Family Details</h2>
+    <p>Here's a little about my family...</p>
+    <p>My heart blossoms when I'm with my parents.</p>
+    <p>My world turns peaceful.</p>
+    <p>Love of my life ♡.</p>
+</div>
+
+<div id="gallery" class="content container gallery">
+    <h2>Photo Gallery</h2>
+    <p>Here are some of my favorite photos:</p>
+    <img src="C:\Users\user\Pictures\Screenshots\Screenshot (23).png" alt="Mom and Dad">
+    <img src="C:\Users\user\Pictures\Screenshots\Screenshot (24).png" alt="Photo 2">
+    <!-- Add more photos as needed -->
+</div>
+
+<div id="contact" class="content container">
+    <h2>Contact</h2>
+    <p>You can reach me at skfarheen@gmail.com.</p>
+</div>
+
+<script>
+    function showContent(section) {
+        var contents = document.getElementsByClassName('content');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].classList.remove('active');
+        }
+        document.getElementById(section).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
